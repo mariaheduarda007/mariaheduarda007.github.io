@@ -2,7 +2,24 @@ body {
     background-image: url("https://gileduardo.com.br/ifpr/dw/img/background.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center 20vh;
+    background-position: center 10vh;
+}
+
+a{
+    font-size: 22px;
+    padding-right: 2px;
+    text-decoration: none;
+}
+
+a:link{
+    color: white
+}
+a:hover{
+    opacity: 0.6;
+}
+
+a:visited{
+    color: white;
 }
 
 .page-text {
@@ -25,12 +42,6 @@ body {
     padding-bottom: 50px;
     color: white
 }
-
-p {
-    font-size: 22px;
-    padding-right: 2px;
-}
-
 
 
 .material-icons{
