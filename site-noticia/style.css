@@ -36,10 +36,9 @@ a:visited{
 }
 
 .heading {
-    padding-left: 30%;
-    padding-right: 30%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    /* padding-left: 30%;
+    padding-right: 30%; */
+    margin: auto;
     color: white
 }
 
@@ -48,23 +47,27 @@ a:visited{
     font-size: 42px !important;
     border-left: 2px solid white;
     padding-left: 10px;
-    /* display: inline-block; */
     
 
 }
 
-.first {
-    padding-right: 50px;
+.link{
+    padding: 20px;
+    font-size: 32px;
+    text-align: center;
+}
+
+#first {
+    padding: 20px;
     font-size: 32px;
 }
 
-.second {
-    padding-left: 20px;
-    padding-right: 50px;
+#second {
+    padding: 20px;
     font-size: 32px;
 }
 
-.third {
-    padding-left: 20px;
+#third {
+    padding: 20px;
     font-size: 32px;
 }
