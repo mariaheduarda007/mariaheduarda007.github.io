@@ -17,9 +17,9 @@
         >
         <h1 class="title"> MEMORY GAME </h1>
     </header>
-    
+    <h1 id="selection"> SELEÇÃO </h1>
     <div class="container">
-        <a href="ballet.html" target="_blank">
+        <a href="ballet.html" target="_blank" onmouseover="selection('Ballet')" onmouseleave="hide()">
             <img 
             class="card"
             id="ballet"
@@ -29,7 +29,7 @@
             width="240px"
             >
         </a>
-        <a href="sculpture.html" target="_blank">
+        <a href="sculpture.html" target="_blank" onmouseover="selection('Escultura')" onmouseleave="hide()">
             <img 
             class="card"
             id="sculpture"
@@ -39,7 +39,7 @@
             width="240px"
             >
         </a>
-            <a href="painting.html" target="_blank">
+            <a href="painting.html" target="_blank" onmouseover="selection('Pintura')" onmouseleave="hide()">
             <img 
             class="card"
             id="painting"
@@ -55,10 +55,18 @@
     </footer>
 </body>
 </html>
-<!-- <script type="text/javascript">
-    function selection (flag){
-        const card = document.querySelector('#ballet')
-        if(flag==1) 
+<script type="text/javascript">
+    function selection (selection){
+        const text = document.querySelector('#selection')
+        text.style.setProperty('visibility', 'visible');
+        text.innerHTML = selection;
 
     }
-</script> -->
+
+    function hide (){
+        const text = document.querySelector('#selection')
+        text.style.setProperty('visibility', 'hidden');
+    }
+
+    
+</script>
