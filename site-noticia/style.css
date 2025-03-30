@@ -3,6 +3,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 10vh;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -12,14 +14,15 @@ a {
     border-right: solid 2px white;
 }
 
-a:link{
+a:link {
     color: white
 }
-a:hover{
+
+a:hover {
     opacity: 0.6;
 }
 
-a:visited{
+a:visited {
     color: white;
 }
 
@@ -42,16 +45,15 @@ a:visited{
 }
 
 
-.material-icons{
+.material-icons {
     font-size: 42px !important;
     border-left: 2px solid white;
     padding: 0 10px 0 10px;
-    
+
 
 }
 
-.link{
+.link {
     padding: 20px;
     text-align: center;
 }
-
