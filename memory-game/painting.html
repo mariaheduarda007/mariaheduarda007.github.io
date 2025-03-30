@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Memory Game </title>
+    <link rel="icon" href="images/brain.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header >
+        <img 
+        class="logo"
+        src="images/brain.png"
+        height="80px"
+        width="80px"
+        >
+        <h1 class="title"> PLAY NOW! </h1>
+    </header>
+    
+    <div class="container-game">
+
+        <div class="card-wrap"onclick="showHide('first')" >
+            <img 
+                
+                class="card-img" 
+                id="first" 
+                src="images/p1.jpeg" 
+                alt="Imagem de Pintura" 
+                height="270px" 
+                width="240px">
+        </div>
+        
+        <div class="card-wrap"onclick="showHide('second')">
+            <img 
+                 
+                class="card-img" 
+                id="second" 
+                src="images/p2.jpeg" 
+                alt="Imagem de Pintura" 
+                height="270px" 
+                width="240px">
+        </div>
+        
+        <div class="card-wrap"onclick="showHide('third')" >
+            <img 
+                
+                class="card-img" 
+                id="third" 
+                src="images/p3.jpeg" 
+                alt="Imagem de Pintura" 
+                height="270px" 
+                width="240px">
+        </div>
+        
+        <div class="card-wrap"onclick="showHide('fourth')" >
+            <img 
+                
+                class="card-img" 
+                id="fourth" 
+                src="images/p4.jpeg" 
+                alt="Imagem de Pintura" 
+                height="270px" 
+                width="240px">
+        </div>
+        
+        <div class="card-wrap"onclick="showHide('fifth')" >
+            <img 
+                
+                class="card-img" 
+                id="fifth" 
+                src="images/p1.jpeg" 
+                alt="Imagem de Pintura" 
+                height="270px" 
+                width="240px">
+        </div>
+        
+        <div class="card-wrap" onclick="showHide('sixth')" >
+            <img 
+                
+                class="card-img" 
+                id="sixth" 
+                src="images/p2.jpeg" 
+                alt="Imagem de Pintura" 
+                height="270px" 
+                width="240px">
+        </div>
+        
+        <div class="card-wrap" onclick="showHide('seventh')" >
+            <img 
+                
+                class="card-img" 
+                id="seventh" 
+                src="images/p3.jpeg" 
+                alt="Imagem de Ballet" 
+                height="270px" 
+                width="240px">
+        </div>
+        
+        <div class="card-wrap" onclick="showHide('eighth')" >
+            <img 
+                
+                class="card-img" 
+                id="eighth" 
+                src="images/p4.jpeg" 
+                alt="Imagem de Pintura" 
+                height="270px" 
+                width="240px">
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    function showHide (id){
+        const card = document.querySelector(`#${id}`); 
+        if (window.getComputedStyle(card).getPropertyValue('visibility') == "visible") {
+            card.style.setProperty('visibility', 'hidden'); 
+        }
+    else {
+        card.style.setProperty('visibility', 'visible'); 
+    }
+}
+</script>
