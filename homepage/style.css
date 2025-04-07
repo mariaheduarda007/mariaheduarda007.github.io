@@ -1,13 +1,17 @@
+html,
 body {
     margin: 0;
     padding: 0;
+    width: 100vw;
+    overflow: hidden;
+}
+
+body {
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: 100px 1fr;
     grid-template-areas: 'topo topo' 'menu content';
     min-height: 100vh;
-    overflow: hidden;
-
 
 }
 
@@ -37,13 +41,14 @@ header {
 #title {
     color: black;
     font-size: 32px;
-    min-width: 50px;
+    min-width: 100px;
 }
 
 #image {
     height: 80px;
     width: 80px;
 }
+
 .menu-topo {
     display: none;
 
@@ -86,12 +91,12 @@ main {
 
 }
 
-.info-div{
+.info-div {
     text-align: center;
     margin: 50px 100px;
 }
 
-.menu-item{
+.menu-item {
     background-color: black;
     text-align: center;
     height: 50px;
@@ -100,7 +105,7 @@ main {
     border-radius: 20px;
 }
 
-.p-item{
+.p-item {
     color: white;
     font-size: 22px;
     position: relative;
@@ -157,6 +162,11 @@ main {
         grid-template-columns: 100px 1fr;
         grid-template-rows: 100px 1fr;
         grid-template-areas: 'menu-topo topo' 'content content';
+    }
+
+    nav {
+        display: none;
+
     }
 
     .menu-topo {
