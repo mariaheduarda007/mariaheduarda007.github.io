@@ -1,56 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
+html,
 body {
-    background-color: white;
     margin: 0;
     padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
+body {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: 'topo topo' 'menu content';
+    min-height: 100vh;
 
-.content{
-    background-color:oklch(0.257 0.09 281.288);
-    margin: 5% 70% 0 10px;   
-    width: 30%;
-    border-radius: 30px 10px 30px 10px;
-    padding: 5px;
 }
 
-
-.menu{
+header {
+    grid-area: topo;
+    position: relative;
+    background-color: white;
+    border-left: 1px solid black;
+    min-width: 300px;
     display: flex;
-    background-color: oklch(0.257 0.09 281.288);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+
+#profile-image {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: 20px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+
+#title {
+    color: black;
+    font-size: 32px;
+    font-size: min(3.5vw, 42px);
+}
+
+#image {
+    height: 80px;
+    width: 80px;
+}
+
+.menu-topo {
+    display: none;
+
+}
+
+.material-icons {
+    height: 100px;
+    width: 100px;
+    font-size: 30px;
+    color: black;
+    position: relative;
+    top: 40px;
+    left: 40px;
+}
+
+
+
+
+main {
+    grid-area: content;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start; 
+    position: relative; 
+    padding: 20px; 
+}
+
+.info-div {
     text-align: center;
-    margin: 0;
-    width:100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.title{
-    color: white;
-    font-size: 26px;
+nav {
+    grid-area: menu;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+
 }
 
-.box {
-    font-family: 'Playfair Display', Arial;
-    font-size: 22px;
-    width: 45%;
-}
-
-.instance {
-    font-size: 20px;
-    font-family: 'Playfair Display', Arial;
-    color: WHITE;
-}
-
-
-.material-icons{
-    color: white;
+#menu-lateral {
+    width: 200px;
+    height: 400px;
     padding: 5px;
+    background-color: white;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    transform: translateX(-220px);
+
+
 }
 
+
+.menu-title {
+    background-color: black;
+    text-align: center;
+    height: 50px;
+    width: 80%;
+    margin: 20px;
+    padding: 1%;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 15px;
+}
+
+.p-item {
+    color: white;
+    font-size: 22px;
+    position: relative;
+    bottom: 25%;
+}
 
 a:link {
-    font-size: 20px;
-    font-family: 'Playfair Display', Arial;
+    font-size: 22px;
     color: white;
     text-decoration: none;
 }
@@ -62,7 +139,111 @@ a:visited {
 }
 
 a:hover {
-    color:oklch(0.379 0.146 265.522) ;
+    color: oklch(0.379 0.146 265.522);
     text-decoration: none;
+
+}
+
+.material-icons:hover {
+    color: grey;
+}
+
+.menu-open {
+    animation-name: menuOpen;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+}
+
+.menu-close {
+    animation-name: menuClose;
+    animation-duration: 0.5s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes menuOpen {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(200);
+
+    }
+
+}
+
+@keyframes menuClose {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-200);
+
+    }
+
+
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 100px 1fr;
+        grid-template-areas: 'menu-topo topo' 'content content';
+    }
+
+    nav {
+        display: none;
+
+    }
+
+    .menu-topo {
+        display: grid;
+        grid-area: menu-topo;
+    }
+
+    #menu-lateral {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    #profile-image {
+        height: 60px;
+        width: 60px;
+    }
+
+    #image {
+        height: 60px;
+        width: 60px
+    }
+
+    .menu-title {
+        background-color: black;
+        height: 50px;
+        width: 90%;
+        margin: 20px;
+        padding: 1%;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .info-div {
+        width: 300px;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+    #menu-lateral {
+        display: none;
+    }
+
+
 
 }

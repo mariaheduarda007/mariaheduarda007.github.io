@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
         <style>
-            div {
-                width: 100px;
-                height: 100px;
-                background-color: black;
-                position: relative;
-                animation-name: cores;
-                animation-duration: 6s;
-            }
-            @keyframes cores {
-                0%   {background-color: black; left:0px; top:0px;}
-                25%  {background-color: gray; left:200px; top:0px;}
-                50%  {background-color: brown; left:200px; top:200px;}
-                75%  {background-color: burlywood; left:0px; top:200px;}
-                100% {background-color: beige; left:0px; top:0px;}
+            #div1 {
+                position: absolute;
+                left: 5px;
+                width: min(50%, 350px);
+                border: 1px solid blue;
+                background-color: lightsteelblue;
+                padding: 5px;
             }
         </style>
     </head>
     <body>
-        <h1>Animação CSS</h1>
-            <div></div>
+        <h1>Função <i>min()</i></h1>
+        <p>Criando uma div e definindo sua largura de acordo com o menor valor especificado.</p>
+        <p>Redimensione a janela para observar o resulado.</p>
+        <div id="div1">Minha div - width: min(50% - 350px) </div>
     </body>
 </html>
