@@ -6,6 +6,10 @@ body {
     overflow-x: hidden;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -40,8 +44,7 @@ header {
 
 #title {
     color: black;
-    font-size: 32px;
-    font-size: min(3.5vw, 42px);
+    font-size: 3.5vw;
 }
 
 #image {
@@ -64,24 +67,21 @@ header {
     left: 40px;
 }
 
-
-
-
 main {
     grid-area: content;
     background-color: black;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: flex-start; 
-    position: relative; 
-    padding: 20px; 
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding: 20px;
 }
 
 .info-div {
     text-align: center;
     max-width: 600px;
-    margin: 0 auto;
+    margin: auto 0;
 }
 
 nav {
@@ -89,6 +89,8 @@ nav {
     border: 1px solid black;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 
 }
 
@@ -97,8 +99,8 @@ nav {
     height: 400px;
     padding: 5px;
     background-color: white;
-    border-top-right-radius: 10%;
-    border-bottom-right-radius: 10%;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
     position: absolute;
     left: 0;
     z-index: 1;
@@ -108,7 +110,7 @@ nav {
 }
 
 
-.menu-title {
+.menu-item {
     background-color: black;
     text-align: center;
     height: 50px;
@@ -117,6 +119,14 @@ nav {
     padding: 1%;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 15px;
+    box-sizing: border-box;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+
+.menu-item:hover {
+    background-color: rgb(31, 103, 111);
 }
 
 .p-item {
@@ -127,7 +137,7 @@ nav {
 }
 
 a:link {
-    font-size: 22px;
+    font-size: 20px;
     color: white;
     text-decoration: none;
 }
@@ -139,7 +149,7 @@ a:visited {
 }
 
 a:hover {
-    color: oklch(0.379 0.146 265.522);
+    color: black;
     text-decoration: none;
 
 }
@@ -198,7 +208,6 @@ a:hover {
 
     nav {
         display: none;
-
     }
 
     .menu-topo {
@@ -231,6 +240,13 @@ a:hover {
         padding: 1%;
         border-top-left-radius: 20px;
         border-bottom-right-radius: 15px;
+    }
+
+    .p-item {
+        color: white;
+        font-size: 20px;
+        position: relative;
+        bottom: 25%;
     }
 
     .info-div {
