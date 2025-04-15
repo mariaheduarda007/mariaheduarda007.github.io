@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-areas: 'menu simulator';
+    min-height: 100vh;
+    // box-sizing: border-box;
+
+}
+
+.font {
+    font-size: 24px;
+    color: rgb(24, 22, 22);
+}
+
+.menu {
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(109, 109, 163);
+}
+
+.color-options {
+    width: 150px;
+    height: 100px;
+    display: flex;
+    direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.option-box {
+    height: 45%;
+    width: 30%;
+}
+
+.pink-box {
+    @extend .option-box;
+    background-color: pink;
+}
+
+.salmon-box {
+    @extend .option-box;
+    background-color: salmon;
+}
+
+.blue-box {
+    @extend .option-box;
+    background-color: lightblue;
+}
+
+.white-box {
+    @extend .option-box;
+    background-color: white;
+}
+
+.orange-box {
+    @extend .option-box;
+    background-color: orange;
+}
+
+.green-box {
+    @extend .option-box;
+    background-color: rgb(89, 204, 141);
+}
+
+.format-options {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    direction: row;
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.format-box {
+    height: 40px;
+    width: 40px;
+}
+
+.format-round {
+    @extend .format-box;
+    background-color: hotpink;
+    border-radius: 50%;
+}
+
+.format-square {
+    @extend .format-box;
+    background-color: hotpink;
+
+}
+
+
+.size-input {
+    @extend .input-decoration;
+    height: 25px;
+    width: 170px;
+}
+
+.align-input {
+    height: 120px;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.input-decoration {
+    border-radius: 5px;
+    border-color: rgb(54, 53, 53);
+    border-width: 2px;
+    outline: none;
+}
+
+.select-align {
+    @extend .input-decoration;
+    width: 170px;
+    height: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+.simulator {
+    grid-area: simulator;
+    background-color: rgb(236, 223, 223);
+
+}
