@@ -101,6 +101,7 @@ h3 {
     @extend .format-box;
     background-color: hotpink;
     border-radius: 50%;
+
 }
 
 #format-square {
@@ -138,13 +139,6 @@ h3 {
     outline: none;
 }
 
-
-
-
-
-
-
-
 #simulator {
     grid-area: simulator;
     padding: 30px;
@@ -158,6 +152,7 @@ h3 {
     width: 140px;
     background-color: pink;
     border: black solid  1px;
+    border-radius: 50%;
 
 
     transition-duration: 0.5s;
@@ -166,24 +161,8 @@ h3 {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .box-selection{
-    border: rgb(4, 4, 4) solid;
-    border-width: 3px;
+    border: rgb(4, 4, 4) solid 3px;
 }
 
 

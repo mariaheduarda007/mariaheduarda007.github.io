@@ -137,12 +137,12 @@ h3 {
   width: 140px;
   background-color: pink;
   border: black solid 1px;
+  border-radius: 50%;
   transition-duration: 0.5s;
   transition-property: background-color border-radius;
   transition-timing-function: ease;
 }
 
 .box-selection {
-  border: rgb(4, 4, 4) solid;
-  border-width: 3px;
+  border: rgb(4, 4, 4) solid 3px;
 }/*# sourceMappingURL=style.css.map */
