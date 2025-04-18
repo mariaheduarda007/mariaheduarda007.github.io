@@ -145,12 +145,12 @@ h3 {
 
 
 
-.simulator {
+#simulator {
     grid-area: simulator;
     padding: 30px;
     background-color: rgb(236, 223, 223);
     display: flex;
-    column-gap: 10px;
+    gap: 10px;
 }
 
 .flex-box{

@@ -50,19 +50,48 @@ function selectFormat(format) {
 }
 
 function inputSize() {
-    
-    const inputBox = document.querySelector("#size-options");
-    const flexDivs = document.querySelectorAll(".flex-box");
-    
-    const value = Number(inputBox.value);
-    
-        if (Number(inputBox.value) <= 180 && Number(inputBox.value) >= 100){
-            
-           flexDivs.forEach((div) => {
-             div.style.setProperty("width", value + "px");
-             div.style.setProperty("height", value + "px");
-           });
-           
-        }
-        
+  const inputBox = document.querySelector("#size-options");
+  const flexDivs = document.querySelectorAll(".flex-box");
+
+  const value = Number(inputBox.value);
+
+  if (Number(inputBox.value) <= 180 && Number(inputBox.value) >= 100) {
+    flexDivs.forEach((div) => {
+      div.style.setProperty("width", value + "px");
+      div.style.setProperty("height", value + "px");
+    });
+  }
 }
+
+function selectFlexDirection() {
+  const box = document.querySelector("#flex-direction");
+  const flexDivs = document.querySelector("#simulator");
+
+  const value = box.value;
+  const valueMin = value.toLowerCase()
+  
+  flexDivs.style.setProperty('flex-direction', valueMin);
+
+}
+
+function selectJustifyContent() {
+    const box = document.querySelector("#justify-content");
+    const flexDivs = document.querySelector("#simulator");
+  
+    const value = box.value;
+    const valueMin = value.toLowerCase()
+    
+    flexDivs.style.setProperty('justify-content', valueMin);
+  
+  }
+
+  function selectAlignItems() {
+    const box = document.querySelector("#align-items");
+    const flexDivs = document.querySelector("#simulator");
+  
+    const value = box.value;
+    const valueMin = value.toLowerCase()
+    
+    flexDivs.style.setProperty('align-items', valueMin);
+  
+  }

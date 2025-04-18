@@ -124,13 +124,12 @@ h3 {
   outline: none;
 }
 
-.simulator {
+#simulator {
   grid-area: simulator;
   padding: 30px;
   background-color: rgb(236, 223, 223);
   display: flex;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  gap: 10px;
 }
 
 .flex-box {
