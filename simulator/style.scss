@@ -5,13 +5,17 @@ body {
     grid-template-columns: 300px 1fr;
     grid-template-areas: 'menu simulator';
     min-height: 100vh;
-    // box-sizing: border-box;
+    box-sizing: border-box;
 
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .font {
     font-size: 24px;
-    color: rgb(24, 22, 22);
+    color: rgb(255, 253, 253);
 }
 
 .menu {
@@ -22,9 +26,20 @@ body {
     background-color: rgb(109, 109, 163);
 }
 
+.subtitle {
+    @extend .font;
+    position: relative;
+    bottom: 35px;
+}
+
+h3 {
+    margin: 2.5vh 0;
+}
+
 .color-options {
     width: 150px;
     height: 100px;
+    gap: 5px;
     display: flex;
     direction: row;
     flex-wrap: wrap;
@@ -36,32 +51,32 @@ body {
     width: 30%;
 }
 
-.pink-box {
+#pink-box {
     @extend .option-box;
     background-color: pink;
 }
 
-.salmon-box {
+#salmon-box {
     @extend .option-box;
     background-color: salmon;
 }
 
-.blue-box {
+#blue-box {
     @extend .option-box;
     background-color: lightblue;
 }
 
-.white-box {
+#white-box {
     @extend .option-box;
     background-color: white;
 }
 
-.orange-box {
+#orange-box {
     @extend .option-box;
     background-color: orange;
 }
 
-.green-box {
+#green-box {
     @extend .option-box;
     background-color: rgb(89, 204, 141);
 }
@@ -74,6 +89,7 @@ body {
     column-gap: 10px;
     justify-content: center;
     align-items: center;
+
 }
 
 .format-box {
@@ -81,49 +97,46 @@ body {
     width: 40px;
 }
 
-.format-round {
+#format-round {
     @extend .format-box;
     background-color: hotpink;
     border-radius: 50%;
 }
 
-.format-square {
+#format-square {
     @extend .format-box;
     background-color: hotpink;
 
 }
 
-
-.size-input {
+#size-options {
     @extend .input-decoration;
     height: 25px;
     width: 170px;
 }
 
-.align-input {
+.align-options {
     height: 120px;
     width: 170px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+
 }
 
-
-.input-decoration {
-    border-radius: 5px;
-    border-color: rgb(54, 53, 53);
-    border-width: 2px;
-    outline: none;
-}
-
-.select-align {
+.align-box {
     @extend .input-decoration;
     width: 170px;
     height: 120px;
 }
 
-
+.input-decoration {
+    border-radius: 5px;
+    border: rgb(4, 4, 4) solid;
+    border-width: 3px;
+    outline: none;
+}
 
 
 
@@ -134,6 +147,44 @@ body {
 
 .simulator {
     grid-area: simulator;
+    padding: 30px;
     background-color: rgb(236, 223, 223);
-
+    display: flex;
+    column-gap: 10px;
 }
+
+.flex-box{
+    height: 140px;
+    width: 140px;
+    background-color: pink;
+    border: black solid  1px;
+
+
+    transition-duration: 0.5s;
+    transition-property: background-color border-radius;
+    transition-timing-function: ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box-selection{
+    border: rgb(4, 4, 4) solid;
+    border-width: 3px;
+}
+
+
+

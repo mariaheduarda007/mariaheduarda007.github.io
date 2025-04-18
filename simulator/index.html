@@ -11,62 +11,121 @@
 
 <body>
     <div class="menu">
-        <h2>
+        <h2 class="font">
             SIMULADOR
         </h2>
-        <h3 class="font">
+        <h3 class="subtitle">
             Flexbox
         </h3>
         <h3 class="font">
             Preenchimento
         </h3>
         <div class="color-options">
-            <div class="pink-box"></div>
-            <div class="salmon-box"></div>
-            <div class="blue-box"></div>
-            <div class="white-box"></div>
-            <div class="orange-box"></div>
-            <div class="green-box"></div>
+            <div onclick="selectColor('#pink-box')" id="pink-box"></div>
+            <div onclick="selectColor('#salmon-box')" id="salmon-box"></div>
+            <div onclick="selectColor('#blue-box')" id="blue-box"></div>
+            <div onclick="selectColor('#white-box')" id="white-box"></div>
+            <div onclick="selectColor('#orange-box')" id="orange-box"></div>
+            <div onclick="selectColor('#green-box')"id="green-box"></div>
         </div>
         <h3 class="font">
             Formato
         </h3>
         <div class="format-options">
-            <div class="format-round">
+            <div onclick="selectFormat('#format-round')" id="format-round">
             </div>
-            <div class="format-square">
+            <div onclick="selectFormat('#format-square')" id="format-square">
             </div>
         </div>
         <h3 class="font">
             Tamanho
         </h3>
-        <input type="number" class="size-input" min="100" max="180">
+        <input oninput="inputSize()" type="number" value="140"id="size-options" min="100" max="180">
         <h3 class="font"> Alinhamento </h3>
+        <div class="align-options">
+            <select class="align-box" name="align" id="align">
+                <option selected hidden>
+                    FLEX DIRECTION
+                </option>
+                <option>
+                    ROW
+                </option>
+                <option>
+                    COLUMN
+                </option>
+                <option>
+                    ROW-REVERSE
+                </option>
+                <option>
+                    COLUMN REVERSE
+                </option>
+            </select>
 
-        <div class="align-input">
-            <select class="select-align" name="align" id="align">
+            <select class="align-box" name="align" id="align">
+                <option selected hidden>
+                    JUSTIFY CONTENT
+                </option>
                 <option>
-                FLEX DIRECTION
+                    START
+                </option>
+                <option>
+                    CENTER
+                </option>
+                <option>
+                    END
+                </option>
+                <option>
+                    SPACE-BETWEEN
+                </option>
+                <option>
+                    SPACE-EVENLY
+                </option>
+                <option>
+                    SPACE-AROUND
+                </option>
+                <option>
+                    STRETCH
                 </option>
             </select>
-    
-            <select class="select-align" name="align" id="align">
+
+            <select class="align-box" name="align" id="align">
+                <option selected hidden>
+                    ALIGN-ITEMS
+                </option>
                 <option>
-                JUSTIFY CONTENT
+                    START
+                </option>
+                <option>
+                    CENTER
+                </option>
+                <option>
+                    END
+                </option>
+                <option>
+                    START
+                </option>
+                <option>
+                    CENTER
+                </option>
+                <option>
+                    STRETCH
                 </option>
             </select>
-    
-            <select class="select-align" name="align" id="align">
-                <option>
-                ALIGN-ITEMS
-                </option>
-            </select>
-         </div>
-       
-        
+        </div>
+
+
     </div>
     <div class="simulator">
 
+        <div class="flex-box">
+
+        </div>
+        <div class="flex-box">
+
+        </div>
+        <div class="flex-box">
+
+        </div>
     </div>
 </body>
 <script src="script.js">
