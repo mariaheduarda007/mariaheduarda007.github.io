@@ -138,6 +138,9 @@ h3 {
   background-color: pink;
   border: black solid 1px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition-duration: 0.5s;
   transition-property: background-color border-radius;
   transition-timing-function: ease;

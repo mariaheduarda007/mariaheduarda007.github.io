@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/star.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <title> Homepage Madu </title>
+</head>
+
+<body>
+    <header>
+        <div id="profile-image"> <img alt="Foto Estrela" id="image" src="../images/star.png"> </div>
+        <p id="title"> Desenvolvimento Web </p>
+    </header>
+    <div class="menu-topo">
+        <i class="material-icons" onclick="openMenu()">menu</i>
+    </div>
+    <nav>
+        <div class="menu-item">
+            <p class="p-item"> <a class="link" href="curriculo-server/index.html" target="_blank"> Currículo </a> </p>
+        </div>
+        <div class="menu-item">
+            <p class="p-item"> <a class="link" href="site-noticia/index.html" target="_blank"> Site de Notícias </a>
+            </p>
+        </div>
+        <div class="menu-item">
+            <p class="p-item"> <a class="link" href="memory-game/index.html" target="_blank"> Jogo da Memória </a>
+            </p>
+        </div>
+        <div class="menu-item">
+            <p class="p-item"> <a class="link" href="1ºB-avaliacaoA/index.html" target="_blank"> 1B - Avaliação A </a>
+            </p>
+        </div>
+        <div class="menu-item">
+            <p class="p-item"> <a class="link" href="simulator/index.html" target="_blank"> Simulador Flexbox </a>
+            </p>
+        </div>
+    </nav>
+    <main>
+        <div id="menu-lateral">
+            <div class="menu-item">
+                <p class="p-item"> <a class="link" href="curriculo-server/index.html" target="_blank"> Currículo </a>
+                </p>
+            </div>
+            <div class="menu-item">
+                <p class="p-item"> <a class="link" href="site-noticia/index.html" target="_blank"> Site de Notícias </a>
+                </p>
+            </div>
+            <div class="menu-item">
+                <p class="p-item"> <a class="link" href="memory-game/index.html" target="_blank"> Jogo da Memória </a>
+                </p>
+            </div>
+            <div class="menu-item">
+                <p class="p-item"> <a class="link" href="1ºB-avaliacaoA/index.html" target="_blank"> 1B - Avaliação A
+                    </a>
+                </p>
+            </div>
+            <div class="menu-item">
+                <p class="p-item"> <a class="link" href="simulator/index.html" target="_blank"> Simulador Flexbox </a>
+                </p>
+            </div>
+        </div>
+        <div id="div-gif"> <img id="gif" alt="Gif Floresta" src="../images/forest.gif"> </div>
+        <div class="info-div">
+            <p class="p-item"> Informações de Contato </p>
+            <p class="p-item">
+                maduinfo23@gmail.com
+            </p>
+            <p class="p-item">
+                Ensino Médio Integrado - Curso Técnico de Informática
+            </p>
+    </main>
+</body>
+<script type="text/javascript">
+    function openMenu() {
+        const menu = document.querySelector('#menu-lateral')
+
+        if (menu.classList.contains('menu-open')) {
+            menu.classList.remove('menu-open');
+            menu.classList.add('menu-close');
+
+        }
+        else {
+            menu.classList.remove('menu-close');
+            menu.classList.add('menu-open');
+        }
+
+    }
+
+</script>
+
+</html>

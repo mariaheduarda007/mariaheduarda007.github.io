@@ -1,169 +1,162 @@
 body {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-template-areas: 'menu simulator';
-    min-height: 100vh;
-    box-sizing: border-box;
-
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas: "menu simulator";
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .font {
-    font-size: 24px;
-    color: rgb(255, 253, 253);
+  font-size: 24px;
+  color: rgb(255, 253, 253);
 }
 
 .menu {
-    grid-area: menu;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(109, 109, 163);
+  grid-area: menu;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(109, 109, 163);
 }
 
 .subtitle {
-    @extend .font;
-    position: relative;
-    bottom: 35px;
+  @extend .font;
+  position: relative;
+  bottom: 35px;
 }
 
 h3 {
-    margin: 2.5vh 0;
+  margin: 2.5vh 0;
 }
 
 .color-options {
-    width: 150px;
-    height: 100px;
-    gap: 5px;
-    display: flex;
-    direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  width: 150px;
+  height: 100px;
+  gap: 5px;
+  display: flex;
+  direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .option-box {
-    height: 45%;
-    width: 30%;
+  height: 45%;
+  width: 30%;
 }
 
 #pink-box {
-    @extend .option-box;
-    background-color: pink;
+  @extend .option-box;
+  background-color: pink;
 }
 
 #salmon-box {
-    @extend .option-box;
-    background-color: salmon;
+  @extend .option-box;
+  background-color: salmon;
 }
 
 #blue-box {
-    @extend .option-box;
-    background-color: lightblue;
+  @extend .option-box;
+  background-color: lightblue;
 }
 
 #white-box {
-    @extend .option-box;
-    background-color: white;
+  @extend .option-box;
+  background-color: white;
 }
 
 #orange-box {
-    @extend .option-box;
-    background-color: orange;
+  @extend .option-box;
+  background-color: orange;
 }
 
 #green-box {
-    @extend .option-box;
-    background-color: rgb(89, 204, 141);
+  @extend .option-box;
+  background-color: rgb(89, 204, 141);
 }
 
 .format-options {
-    width: 150px;
-    height: 50px;
-    display: flex;
-    direction: row;
-    column-gap: 10px;
-    justify-content: center;
-    align-items: center;
-
+  width: 150px;
+  height: 50px;
+  display: flex;
+  direction: row;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .format-box {
-    height: 40px;
-    width: 40px;
+  height: 40px;
+  width: 40px;
 }
 
 #format-round {
-    @extend .format-box;
-    background-color: hotpink;
-    border-radius: 50%;
-
+  @extend .format-box;
+  background-color: hotpink;
+  border-radius: 50%;
 }
 
 #format-square {
-    @extend .format-box;
-    background-color: hotpink;
-
+  @extend .format-box;
+  background-color: hotpink;
 }
 
 #size-options {
-    @extend .input-decoration;
-    height: 25px;
-    width: 170px;
+  @extend .input-decoration;
+  height: 25px;
+  width: 170px;
 }
 
 .align-options {
-    height: 120px;
-    width: 170px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-
+  height: 120px;
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
 }
 
 .align-box {
-    @extend .input-decoration;
-    width: 170px;
-    height: 120px;
+  @extend .input-decoration;
+  width: 170px;
+  height: 120px;
 }
 
 .input-decoration {
-    border-radius: 5px;
-    border: rgb(4, 4, 4) solid;
-    border-width: 3px;
-    outline: none;
+  border-radius: 5px;
+  border: rgb(4, 4, 4) solid;
+  border-width: 3px;
+  outline: none;
 }
 
 #simulator {
-    grid-area: simulator;
-    padding: 30px;
-    background-color: rgb(236, 223, 223);
-    display: flex;
-    gap: 10px;
+  grid-area: simulator;
+  padding: 30px;
+  background-color: rgb(236, 223, 223);
+  display: flex;
+  gap: 10px;
 }
 
-.flex-box{
-    height: 140px;
-    width: 140px;
-    background-color: pink;
-    border: black solid  1px;
-    border-radius: 50%;
+.flex-box {
+  height: 140px;
+  width: 140px;
+  background-color: pink;
+  border: black solid 1px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-
-    transition-duration: 0.5s;
-    transition-property: background-color border-radius;
-    transition-timing-function: ease;
+  transition-duration: 0.5s;
+  transition-property: background-color border-radius;
+  transition-timing-function: ease;
 }
 
-
-.box-selection{
-    border: rgb(4, 4, 4) solid 3px;
+.box-selection {
+  border: rgb(4, 4, 4) solid 3px;
 }
-
-
-
