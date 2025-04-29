@@ -6,4 +6,62 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+#left {
+  background-color: white;
+  width: 100px;
+}
+
+.title {
+  margin: 0 auto;
+}
+
+.input {
+  width: 350px;
+}
+
+#btn {
+  height: 40px;
+  width: 80px;
+}
+
+#line {
+  height: 1px;
+  margin: 0 auto;
+}
+
+#icons {
+  margin: 0 auto;
+}
+
+.bg-icons, #i-linkedin, #i-twitter, #i-google, #i-facebook {
+  width: 40px;
+  height: 40px;
+}
+
+#i-facebook {
+  background-color: blue;
+}
+
+#i-google {
+  background-color: red;
+}
+
+#i-twitter {
+  background-color: rgb(97, 184, 239);
+}
+
+#i-linkedin {
+  background-color: darkblue;
+}
+
+#image {
+  background-image: url("logo_ifpr.jpg");
+  background-position: center;
+}
+
+#right {
+  padding: 0;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
