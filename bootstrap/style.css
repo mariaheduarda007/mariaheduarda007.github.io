@@ -1,0 +1,24 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: rgb(148, 17, 17);
+  overflow: hidden; /* importante para evitar barra de rolagem horizontal */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#customRange::-webkit-slider-thumb {
+  background-color: #2044d5;
+}
+
+#customRange::-webkit-slider-runnable-track {
+  background-color: #a2adbe;
+}
+
+.navbar {
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+}/*# sourceMappingURL=style.css.map */
