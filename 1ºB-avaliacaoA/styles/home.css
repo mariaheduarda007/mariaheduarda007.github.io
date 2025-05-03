@@ -1,0 +1,285 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Georgia" !important;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 100px 1fr 60px;
+    grid-template-areas: 'header' 'main' 'footer';
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  header {
+    grid-area: header;
+    border-bottom: 2px solid white;
+    background-color: darkblue
+  }
+  
+  #header {
+    position: relative;
+    width: 95%;
+    text-align: center;
+    background-color: white;
+    height: 90%;
+    margin: 5px auto;
+  }
+  
+  #title1 {
+    position: relative;
+    right: 100px;
+    bottom: 12px;
+    animation-name: colors;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+  }
+  
+  #title2 {
+    position: relative;
+    left: 100px;
+    bottom: 12px;
+    animation-name: colors;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes colors {
+    0% {
+      color: lightblue
+    }
+  
+    25% {
+      color: darkblue
+    }
+  
+    50% {
+      color: lightcoral
+    }
+  
+    100% {
+      color: darkred
+    }
+  }
+  
+  #image {
+    display: inline;
+    margin: 20px;
+  }
+  
+  #logo {
+    position: relative;
+    top: 10px;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+  }
+  
+  h1 {
+    display: inline;
+  }
+  
+  main {
+    grid-area: main;
+  }
+  
+  #div-main {
+    height: 100px;
+    width: 100%;
+    background-color: darkblue;
+  }
+  
+  #title-main {
+    position: relative;
+    top: 30px;
+    left: 34vw;
+    right: 40vw;
+    color: white;
+    font-size: 42px;
+  }
+  
+  footer {
+    grid-area: footer;
+    background-color: darkblue
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    text-align: top;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #dbe8f9;
+  }
+  
+  tr:hover {
+    background-color: #c1ccdb;
+  }
+  
+  table.response {
+    padding: 10px;
+    overflow-x: auto;
+  }
+  
+  th {
+    font-size: 22px;
+    background-color: white;
+    color: darkred
+  }
+  
+  td {
+    color: darkblue;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  tr {
+    height: 70px;
+  }
+  
+  #plane1 {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    transform: rotate(-90deg);
+    animation: moveRight 4s linear infinite;
+  }
+  
+  #plane2 {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    transform: rotate(90deg);
+    animation: moveLeft 4s linear infinite;
+  }
+  
+  @keyframes moveRight {
+    0% {
+      right: 0;
+      transform: rotate(-90deg);
+    }
+  
+    25% {
+      right: 150px;
+      transform: rotate(-90deg);
+    }
+  
+    50% {
+      right: 300px;
+      transform: translateX(-200px) rotate(-90deg);
+    }
+  
+    75% {
+      right: 600px;
+      transform: rotate(90deg);
+    }
+  
+    90% {
+      right: 200px;
+      transform: rotate(90deg);
+    }
+  
+    100% {
+      right: 10px;
+      transform: rotate(-90deg);
+    }
+  }
+  
+  @keyframes moveLeft {
+    0% {
+      left: 0;
+      transform: rotate(90deg);
+    }
+  
+    25% {
+      left: 150px;
+      transform: rotate(90deg);
+    }
+  
+    50% {
+      left: 300px;
+      transform: translateX(200px) rotate(90deg);
+    }
+  
+    75% {
+      left: 600px;
+      transform: rotate(-90deg);
+    }
+  
+    90% {
+      left: 200px;
+      transform: rotate(-90deg);
+    }
+  
+    100% {
+      left: 10px;
+      transform: rotate(90deg);
+    }
+  }
+  
+  @media screen and (max-width: 1058px) {
+  
+    #title1,
+    #title2 {
+      font-size: 24px
+    }
+  
+    #image {
+      display: inline;
+      margin: 5px; 
+    }
+  
+    #title1 {
+      right: 30px
+    }
+    #title2 {
+      left: 30px
+    }
+  
+    #title-main {
+      font-size: 32px
+    }
+  }
+  
+  @media screen and (max-width: 910px) {
+    .col1 {
+      display: none;
+    }
+  
+    #title1,
+    #title2 {
+      font-size: 18px;
+      text-align: center;
+    }
+  
+    #logo {
+      width: 65px;
+      height: 65px;
+    }
+  
+  
+  }
+  
+  @media screen and (max-width: 600px) {
+    .col2 {
+      display: none;
+    }
+  
+    #title1,
+    #title2 {
+      font-size: 14px;
+      text-align: center;
+    }
+    #title-main {
+      font-size: 22px;
+      left:150px
+    }
+  }

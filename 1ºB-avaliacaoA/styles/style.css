@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Georgia";
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  h1 {
+    color: darkblue;
+    font-size: 42px;
+    margin-bottom: 5px;
+  }
+  
+  h3 {
+    color: darkred;
+    font-size: 22px;
+    margin-top: 0;
+  }
+  h4 {
+    color: darkred;
+  }
+  .screen1 {
+    grid-area: left;
+    width: 50vw;
+    height: 100vh;
+    padding: 40px;
+  }
+  .screen2 {
+    grid-area: right;
+    width: 50vw;
+    height: 100vh;
+  }
+  #logo {
+    width: 50vw;
+    height: 100vh;
+  }
+  .choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  #icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "one two three";
+    padding: 0;
+    column-gap: 60px;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+  #one {
+    grid-area: one;
+  }
+  #two {
+    grid-area: two;
+  }
+  #three {
+    grid-area: three;
+  }
+  hr {
+    stroke: rgb(175, 43, 43);
+  }
+  input {
+    width: 45vw;
+    height: 30px;
+    border: none;
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-radius: 3px;
+    padding: 0 10px;
+  }
+  
+  input:focus {
+    outline: none;
+    border: 2px solid;
+    border-radius: 3px;
+    border-color: darkred;
+  }
+  
+  #button-login {
+    text-decoration: none;
+    background-color: darkblue;
+    color: white;
+    height: 40px;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 200px;
+  }
+  #button-password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(218, 169, 11);
+    font-size: 18px;
+    cursor: pointer;
+  }
+  #line {
+    background-color: darkblue;
+    height: 2px;
+  }
+  
+  @media screen and (max-width: 930px) {
+    .screen2 {
+      display: none;
+    }
+  
+    .screen1 {
+      width: 100vw;
+    }
+  
+    input {
+      width: 80vw
+    }
+  
+    #line {
+      width: 80vw
+    }
+  
+    .choices {
+      column-gap: 20px;
+    }
+    #button-password {
+      width: 200px;
+    }
+  }

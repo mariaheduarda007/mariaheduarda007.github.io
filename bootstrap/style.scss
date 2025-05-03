@@ -24,13 +24,13 @@
 //   border-bottom-right-radius: 150px;
 // }
 
-
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: rgb(148, 17, 17);
-  overflow: hidden; /* importante para evitar barra de rolagem horizontal */
+  background-color: rgb(221, 221, 221) !important;
+  overflow: hidden;
 }
 
 * {
@@ -49,3 +49,43 @@ html, body {
   border-bottom-left-radius: 150px;
   border-bottom-right-radius: 150px;
 }
+
+#chartFrequency {
+  background-color: white;
+}
+
+td {
+  text-align: center;
+}
+
+#tableComponente tr:nth-child(odd) {
+  background-color: rgb(38, 43, 49);
+  border-bottom: 1px rgb(144, 144, 144) solid;
+}
+
+#tableComponente tr:nth-child(even) {
+  background-color: rgb(44, 49, 55);
+  border-bottom: 1px rgb(144, 144, 144) solid;
+}
+
+#tableConceito tr:nth-child(odd) {
+  background-color: rgb(216, 216, 216);
+  border-bottom: 1px rgb(188, 188, 188) solid;
+}
+
+
+#tableConceito tr:nth-child(even) {
+  background-color: rgb(236, 232, 232);
+  border-bottom: 1px rgb(188, 188, 188) solid;
+}
+
+#selectDisciplines option:nth-child(even) {
+  background-color: rgb(216, 216, 216);
+}
+
+.modal-dialog, .modal-content, .modal-body {
+  height: 90vh;
+}
+
+
+
