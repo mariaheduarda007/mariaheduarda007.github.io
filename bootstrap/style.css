@@ -43,12 +43,12 @@ td {
 }
 
 #tableConceito tr:nth-child(odd) {
-  background-color: rgb(216, 216, 216);
+  background-color: rgb(186, 186, 186);
   border-bottom: 1px rgb(188, 188, 188) solid;
 }
 
 #tableConceito tr:nth-child(even) {
-  background-color: rgb(236, 232, 232);
+  background-color: rgb(209, 209, 209);
   border-bottom: 1px rgb(188, 188, 188) solid;
 }
 

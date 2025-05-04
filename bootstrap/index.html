@@ -14,47 +14,48 @@
 <body>
   <nav style="height: 15%;" class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container position-relative w-75">
-      <img src="images.png" width="90px" height="90px" style="border-radius: 50%" class="me-4" />
+
+      <img src="images.png" width="90px" height="90px" class="me-4 rounded-circle" />
 
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#itens">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div id="itens" class="collapse navbar-collapse card bg-dark py-2 show position-relative z-3">
-        <ul class="navbar-nav">
-          <li class="nav-item me-4 ">
-            <button type="button" class="btn position-relative btn-light rounded-0 navbar-collapse">
+      <div id="itens" class="collapse navbar-collapse px-1 bg-dark py-2 position-relative z-3">
+        <ul class="navbar-nav navbar-collapse mx-4 d-flex flex-column flex-md-row align-items-start ">
+          <li class="nav-item me-4 my-md-0 my-1">
+            <button type="button" class="btn position-relative btn-light rounded-0 ">
               Novos Dados
               <span
                 class="badge position-absolute top-0 translate-middle start-100 bg-danger text-white rounded-4">57</span>
             </button>
           </li>
-          <li class="nav-item me-4 ">
+          <li class="nav-item me-4 my-md-0 my-1">
             <select class="btn btn-light rounded-0">
               <option selected hidden>Anual</option>
               <option>Opções</option>
             </select>
           </li>
-          <li class="nav-item me-4">
+          <li class="nav-item me-4 my-md-0 my-1">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="checkServidores" />
+              <input class="form-check-input" type="checkbox"  />
               <label class="form-check-label text-light" for="checkServidores">Servidores</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="checkEstudantes" />
+              <input class="form-check-input" type="checkbox" />
               <label class="form-check-label text-light" for="checkEstudantes">Estudantes</label>
             </div>
           </li>
-          <li class="nav-item me-2 ">
-            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c"
+          <li class="nav-item me-2 my-md-0 my-1">
+            <input type="color" class="form-control form-control-color" value="#563d7c"
               title="Choose your color" />
           </li>
-          <li class="nav-item ">
+          <li class="nav-item my-md-0 my-1">
             <select onchange="showCanvas()" id="menuSelect" class="btn btn-dark">
               <option selected hidden>Mais</option>
               <option value="menu">Registro de Conceitos
               </option>
-              <option value="map">Mapa de Frequências</option>
+              <option value="map" >Mapa de Frequências</option>
             </select>
           </li>
         </ul>
@@ -63,16 +64,17 @@
   </nav>
 
   <div class="modal fade " id="modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl ">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title"> MAPA DE FREQUÊNCIA </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      
+        <div style="width: 95vw;" class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"> MAPA DE FREQUÊNCIA </h5>
+            <button type="button" class="btn-close" data-0bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body d-flex justify-content-center align-items-center">
+            <div id="map" class="px-sm-0 px-5"> </div>
+          </div>
         </div>
-        <div class="modal-body d-flex justify-content-center align-items-center">
-          <div id="map" class=""> </div>
-        </div>
-      </div>
     </div>
   </div>
 
@@ -135,13 +137,13 @@
   </div>
 
 
-  <div class="container-fluid h-100">
+  <div class="container-fluid h-100 ">
     <div class="row h-100">
-      <div class="col-3 h-100">
+      <div class="col-md-3 d-none d-md-block h-100">
         <div style="width: 80%; height: 27%;" class="card container mt-2 ms-4">
           <div class="w-100 row m-1">
-            <i class="col-2 mx-4 fs-1 bi bi-mortarboard"></i>
-            <h3 class="col-7 my-3 px-2 fs-4">Conceito</h3>
+            <i class="col-xl-2 col text-center mx-3 fs-1 bi bi-mortarboard"></i>
+            <h3 class="col-xl-7 d-xl-block d-none text-nowrap my-3 px-2 fs-4">Conceito</h3>
             <div style="height: 1px; width: 100%;" class="row m-auto bg-dark"></div>
             <div class="row h-100 m-auto mt-2 d-flex align-items-center">
               <h1 class="text-center">B</h1>
@@ -151,10 +153,10 @@
 
         <div style="width: 80%; height: 27%;" class="card container mt-2 ms-4">
           <div class="w-100 row m-1">
-            <i class="col-2 mx-4 fs-1 bi bi-graph-up"></i>
-            <h3 class="col-7 my-3 px-2 fs-4">Frequência</h3>
+            <i class="col-xl-2 col text-center mx-3 fs-1 bi bi-graph-up"></i>
+            <h3 class="col-xl-7 d-xl-block d-none text-nowrap my-3 px-2 fs-4 ">Frequência</h3>
             <div style="height: 1px; width: 100%;" class="row m-auto bg-dark"></div>
-            <div class="row h-100 m-auto mt-2 d-flex align-items-center">
+            <div class="row h-100 mx-auto mt-2 d-flex align-items-center">
               <h1 class="text-center">89,5%</h1>
             </div>
           </div>
@@ -162,8 +164,8 @@
 
         <div style="width: 80%; height: 27%;" class="card container mt-2 ms-4">
           <div class="w-100 row m-1">
-            <i class="col-2 mx-4 fs-1 bi bi-alarm"></i>
-            <h3 class="col-7 my-3 px-2 fs-4">Horas Afins</h3>
+            <i class="col-xl-2 col text-center mx-3 fs-1 bi bi-alarm"></i>
+            <h3 class="col-xl-7 d-xl-block d-none text-nowrap  my-3 px-2 fs-4">Horas Afins</h3>
             <div style="height: 1px; width: 100%;" class="row m-auto bg-dark"></div>
             <div class="row h-100 m-auto mt-2 d-flex align-items-center">
               <h1 class="text-center">74</h1>
@@ -172,15 +174,14 @@
         </div>
       </div>
 
-      <div class="col-5">
+      <div class="col-md-5 col-7">
         <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange">
         <div class="container">
 
-          <canvas id="chartFrequency" class="w-100 ps-5 rounded-2">
+          <canvas id="chartFrequency" class="w-100 ps-md-5 ps-2 rounded-2">
           </canvas>
-          <!--  -->
-          <div class="px-3 py-1 mt-3 bg-light rounded-2">
-            <div id="chartPie" class=" ">
+          <div class="d-flex align-items-center justify-content-center py-1 mt-3 bg-light rounded-2 ">
+            <div id="chartPie" class="ms-sm-0 ms-5 mt-sm-0 mt-1 ps-sm-0 ps-1">
             </div>
 
           </div>
@@ -191,7 +192,7 @@
 
 
 
-      <div class="card col-4 h-75 mt-2 pt-3 ">
+      <div class="card col-md-4 col-5 h-75 mt-2 pt-3 ">
 
         <div>
           <table id="tableComponente" class="w-100 text-light ">

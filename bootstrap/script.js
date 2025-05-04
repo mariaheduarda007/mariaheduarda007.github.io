@@ -43,73 +43,6 @@ new Chart(chartFrequency, {
   },
 });
 
-// const chartPie = document.getElementById("chartPie").getContext("2d");
-// new Chart(chartPie, {
-//   type: "pie",
-//   data: {
-//     labels: ["A", "B", "C", "D"],
-//     datasets: [
-//       {
-//         label: "Conceito",
-//         data: [21.6, 21.6, 24.3, 32.4],
-//         backgroundColor: [
-//           "rgb(220, 220, 220)",
-//           "rgb(160, 160, 160)",
-//           "rgb(100, 100, 100)",
-//           "rgb(50, 50, 50)",
-//         ],
-//         borderWidth: 1,
-//       },
-//     ],
-//   },
-//   options: {
-//     plugins: {
-//       title: {
-//         display: true,
-//         text: "CONCEITOS",
-//         font: {
-//           weight: "bold",
-//         },
-//         align: "start",
-//         padding: {
-//           top: 10,
-//           bottom: 10,
-//         },
-//       },
-//       legend: {
-//         position: "right",
-//         labels: {
-//           usePointStyle: true,
-//         },
-//       },
-//     },
-//   },
-// });
-
-// google.charts.load('current', {
-//   packages: ['corechart', 'pie']
-// });
-
-// google.charts.setOnLoadCallback(drawChart);
-
-// function drawChart() {
-//   var data = google.visualization.arrayToDataTable([
-//     ['Categoria', 'Valor'],
-//     ['Bananas', 10],
-//     ['Maçãs', 20],
-//     ['Laranjas', 30],
-//     ['Uvas', 40]
-//   ]);
-
-//   var options = {
-//     title: 'Distribuição das frutas',
-//     is3D: true,  // Ativa o efeito 3D
-//   };
-
-//   var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-//   chart.draw(data, options);
-// }
-
 google.charts.load("current", {
   packages: ["corechart"],
 });
@@ -125,10 +58,11 @@ function drawChart() {
     ["D", 32.4],
   ]);
 
+
   var options = {
     title: "CONCEITOS",
     is3D: true,
-    pieHole: 0.4,
+    pieHole: 0.8,
     legend: { position: "right" },
     colors: [
       "rgb(220, 220, 220)",
@@ -136,6 +70,7 @@ function drawChart() {
       "rgb(100, 100, 100)",
       "rgb(50, 50, 50)",
     ],
+    backgroundColor: "transparent",
   };
 
   var chart = new google.visualization.PieChart(
