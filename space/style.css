@@ -1,0 +1,35 @@
+body {
+  background-image: url("images/background.png");
+}
+
+#menu {
+  width: 200px;
+  height: 250px;
+  margin: 15px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 3px 3px 10px 5px white;
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-items {
+  width: 75px;
+  height: 75px;
+}
+
+.text-menu {
+  color: white;
+  font-size: 20px;
+}
+
+#nave {
+  position: absolute;
+  top: 600px;
+  left: 650px;
+}/*# sourceMappingURL=style.css.map */
