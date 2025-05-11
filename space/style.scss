@@ -1,8 +1,28 @@
 body {
     background-image: url("images/background.png");
+    overflow: hidden;
+    font-family: 'Playfair Display', serif !important;
+}
+
+#modal {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.6);
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out 0.1s;
+}
+
+#modal-title{
+    font-size: 30px;
+    color: white;
 }
 
 #menu {
+    position: absolute;
     width: 200px;
     height: 250px;
     margin: 15px;
@@ -18,19 +38,22 @@ body {
 }
 
 .menu-items {
-    width: 75px;
-    height: 75px;
+   margin: 5px;
     
 }
 
 .text-menu{
-    color: white;
+    text-align: center;
+    color: rgb(255, 255, 255);
     font-size: 20px;
-}
+    width: 100px;
 
+}
 
 #nave {
     position: absolute;
     top: 600px;
-    left: 650px;
+    left: 200px;
+    // right: 300px;
+    transition: position 0.5s ease-in-out ;
 }
