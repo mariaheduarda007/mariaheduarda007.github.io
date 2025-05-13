@@ -54,6 +54,7 @@ document.addEventListener("keydown", function (e) {
   const _OFFSETRIGHT = 60
   const _OFFSETLEFT = 10 
   const _BOTTOM = 620
+  const _TOP = 0
 
 
   let nave = document.querySelector("#nave");
@@ -97,13 +98,13 @@ document.addEventListener("keydown", function (e) {
   
   if (e.code === "Space" && missilLeftLaunch === false) {
     setTimeout(() => {
-      missilLeft.style.top = topMissilLeft - _BOTTOM + 'px'; 
+      missilLeft.style.top =  _TOP + 'px'; 
       missilLeftLaunch = true
     }, 10);
   }
   else if (e.code === "Space" && missilRightLaunch === false) {
     setTimeout(() => {
-      missilRight.style.top = topMissilRight - _BOTTOM + 'px'; 
+      missilRight.style.top = _TOP + 'px'; 
       missilRightLaunch = true
     }, 10);
   }
