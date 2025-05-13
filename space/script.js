@@ -1,17 +1,18 @@
 let counter = 0;
 let val = 0;
-let hr = 0;
-let min = 0;
-let sec = 0;
-hrStr = "00";
-minStr = "00";
-secStr = "00";
-
+var missilLeftLaunch = false
+var missilRightLaunch = false
 
 
 
 function add() {
   val++;
+  let hr = 0;
+  let min = 0;
+  let sec = 0;
+  hrStr = "00";
+  minStr = "00";
+  secStr = "00";
 
   hr = Math.floor(val / 3600);
   min = Math.floor(val / 60);
@@ -45,10 +46,9 @@ document.addEventListener("keyup", function (e) {
   }
 });
 
-var missilLeftLaunch = false
-var missilRightLaunch = false
-document.addEventListener("keydown", function (e) {
 
+document.addEventListener("keydown", function (e) {
+  
   const _LEFTLIMIT = 250;
   const _RIGHTLIMIT = 1400;
   const _OFFSETRIGHT = 60
@@ -121,6 +121,37 @@ document.addEventListener("keydown", function (e) {
   }
 
 });
+
+document.addEventListener("keydown", function (e) {
+
+  if (e.code === 'Digit1'){
+
+    const body = document.querySelector("body")
+    body.style.backgroundImage = "url('images/background.png')"
+  }
+  else if (e.code === 'Digit2'){
+    const body = document.querySelector("body")
+    body.style.backgroundImage = "url('images/background2.jpg')"
+  }
+  else if (e.code === 'Digit3'){
+    const body = document.querySelector("body")
+    body.style.backgroundImage = "url('images/background3.jpg')"
+  }
+  else if (e.code === 'Digit4'){
+    const body = document.querySelector("body")
+    body.style.backgroundImage = "url('images/background4.jpg')"
+  }
+
+});
+
+
+//e.code = "nome"
+// e.key = "value"
+
+
+
+
+
 
 
 // document.addEventListener("keydown", function (e) {
