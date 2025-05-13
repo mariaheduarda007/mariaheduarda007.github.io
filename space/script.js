@@ -6,6 +6,10 @@ let sec = 0;
 hrStr = "00";
 minStr = "00";
 secStr = "00";
+
+
+
+
 function add() {
   val++;
 
@@ -32,7 +36,7 @@ function stopCounter() {
 
 document.addEventListener("keyup", function (e) {
   let modal = document.querySelector("#modal");
-  if ((e.key === "p" || e.key === "P") && modal.style.display === "none") {
+  if ((e.code === "KeyP") && modal.style.display === "none") {
     modal.style.display = "flex";
     stopCounter();
   } else {
@@ -41,21 +45,123 @@ document.addEventListener("keyup", function (e) {
   }
 });
 
+var missilLeftLaunch = false
+var missilRightLaunch = false
 document.addEventListener("keydown", function (e) {
-  let leftLimit = 200;
-  let rightLimit = 1400;
+
+  const _LEFTLIMIT = 250;
+  const _RIGHTLIMIT = 1400;
+  const _OFFSETRIGHT = 60
+  const _OFFSETLEFT = 10 
+  const _BOTTOM = 620
+
 
   let nave = document.querySelector("#nave");
+  let missilLeft = document.querySelector("#missilLeft");
+  let missilRight = document.querySelector("#missilRight");
+  
+
   let left = parseInt(getComputedStyle(nave).left);
   let right = left - 20;
-  if (e.key === "ArrowRight") {
-    if (left < rightLimit) {
+
+
+  if (e.code === "ArrowRight") {
+    if (left <  _RIGHTLIMIT) {
+      if (missilLeftLaunch === false) {
+        missilLeft.style.left = left + 20 + _OFFSETLEFT + "px";      
+      }
+      if (missilRightLaunch === false) {
+      missilRight.style.left = left + 20 + _OFFSETRIGHT + "px"
+      }
+      
       nave.style.left = left + 20 + "px";
     }
   }
-  if (e.key === "ArrowLeft") {
-    if (right > leftLimit) {
+  if (e.code === "ArrowLeft") {
+    if (right > _LEFTLIMIT) {
+      if (missilLeftLaunch === false) {
+      missilLeft.style.left = right + _OFFSETLEFT + "px"
+      }
+      if (missilRightLaunch === false) {
+      missilRight.style.left = right + _OFFSETRIGHT + "px"
+      }
+      
       nave.style.left = right + "px";
     }
   }
+
+  const topMissilLeft =  parseInt(window.getComputedStyle(missilLeft).top)
+  const topMissilRight =  parseInt(window.getComputedStyle(missilRight).top)
+  const leftNave =  parseInt(window.getComputedStyle(nave).left)
+
+  
+  if (e.code === "Space" && missilLeftLaunch === false) {
+    setTimeout(() => {
+      missilLeft.style.top = topMissilLeft - _BOTTOM + 'px'; 
+      missilLeftLaunch = true
+    }, 10);
+  }
+  else if (e.code === "Space" && missilRightLaunch === false) {
+    setTimeout(() => {
+      missilRight.style.top = topMissilRight - _BOTTOM + 'px'; 
+      missilRightLaunch = true
+    }, 10);
+  }
+  else if (e.code === "Space" ){
+    missilLeft.style.top = _BOTTOM + "px" 
+    missilLeft.style.left = leftNave + _OFFSETLEFT + "px"
+    missilRight.style.left = leftNave + _OFFSETRIGHT  + "px"
+    missilRight.style.top = _BOTTOM + "px"
+    
+    missilRightLaunch = false
+    missilLeftLaunch = false
+
+
+  }
+
 });
+
+
+// document.addEventListener("keydown", function (e) {
+//   const missilLeft = document.querySelector('#missilLeft')
+//   // const missilRight = document.querySelector('#missilRight')
+  
+//   if (e.code === "Space" ) {
+//     setTimeout(() => {
+//       const posLeft =  parseInt(window.getComputedStyle(missilLeft).top)
+//       missil.style.top = posLeft - 630 + 'px'; 
+//     }, 10);
+//   }
+
+// });
+
+
+
+
+// document.addEventListener("keydown", function (e) {
+//   const nave = document.querySelector('#nave')
+//   const posLeft =  parseInt(window.getComputedStyle(nave).left)
+//   const posRight =  parseInt(window.getComputedStyle(nave).right)
+//   const posTop =  parseInt(window.getComputedStyle(nave).top)
+
+
+//   let missil = document.createElement('img')
+//   missil.src = 'images/missil.png'
+//   missil.style.height = '100px'
+//   missil.style.width = '70px'
+//   missil.style.position = 'absolute'
+//   missil.style.left = posLeft + 'px'
+//   missil.style.right = posRight + 'px'
+//   missil.style.top = posTop + 'px'
+//   missil.style.transition = 'top 0.5s ease-in-out'
+  
+//   if (e.code === "Space") {
+//     document.body.appendChild(missil)
+//   }
+//   setTimeout(() => {
+//     missil.style.top = posTop - 600 + 'px'; 
+//   }, 10);
+
+// });
+
+

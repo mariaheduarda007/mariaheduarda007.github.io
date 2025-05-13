@@ -52,6 +52,22 @@ body {
 #nave {
   position: absolute;
   top: 600px;
-  left: 200px;
-  transition: position 0.5s ease-in-out;
-}/*# sourceMappingURL=style.css.map */
+  left: 650px;
+  z-index: 4;
+}
+
+#missilLeft {
+  position: absolute;
+  top: 620px;
+  left: 660px;
+  transition: top 0.5s ease-in-out;
+
+}
+
+#missilRight {
+  position: absolute;
+  top: 620px;
+  left: 710px;
+  transition: top 0.5s ease-in-out;
+
+}

@@ -102,9 +102,9 @@ nav {
 
 #menu-lateral {
     width: 200px;
-    height: 500px;
+    height: auto;
     padding: 5px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     position: absolute;
