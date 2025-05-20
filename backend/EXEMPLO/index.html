@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateElement - JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+<body class="container">
+    <div class="mt-2">
+        <form id="formStudent" method="post" onsubmit="addStudent(); return false;">
+            <div class="form-floating mb-1">
+                <input type="text" class="form-control" id="floatingInput" placeholder="nome" name="nome" required>
+                <label for="floatingInput">Nome do Aluno</label>
+            </div>
+            <div class="form-floating">
+                <select class="form-select mb-1" name="turma" id="select_regional" required>
+                    <option selected disabled>Turma</option>
+                    <option value="INFO22">INFO22</option>
+                    <option value="INFO23">INFO23</option>
+                    <option value="INFO24">INFO24</option>
+                    <option value="INFO25">INFO25</option>
+                </select>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Salvar">
+        </form>
+    </div>
+    <div class="mt-2">            
+        <table class="table" id="table_student">
+            <caption class="caption-top text-center fw-bolder">ALUNOS</caption>
+            <thead class="table-success">
+                <tr>
+                    <th scope="col">NOME</th>
+                    <th scope="col">TURMA</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="mt-2">
+        <select class="form-select" id="select_student">
+            <option selected disabled>Aluno</option>
+        </select>
+    </div>
+</body>
+<script src="./script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</html>
