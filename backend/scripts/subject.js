@@ -1,6 +1,6 @@
 const data_subjects = []
 
-let id = 1
+let idSubject = 1
 
 function addSubject() {
 
@@ -13,8 +13,8 @@ function addSubject() {
     const col_descricao = document.createElement('td')
 
     col_descricao.textContent = input_descricao.value
-    col_id.textContent = id
-    id++
+    col_id.textContent = idSubject
+    idSubject++
 
     line.appendChild(col_id);
     line.appendChild(col_descricao);
@@ -33,5 +33,5 @@ function addSubject() {
 
     select.appendChild(op)
 
-    // form.reset()
+    form.reset()
 }

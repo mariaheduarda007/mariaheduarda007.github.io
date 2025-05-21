@@ -1,9 +1,8 @@
 const data_regionals = []
-let id = 1
+let idRegional = 1
 
 function addRegional (){
 
-    alert("oi")
     const form = document.querySelector('#formRegional')
     const input_sigla = form.querySelector('input[name="sigla"]')
     const input_cidade = form.querySelector('input[name="cidade"]')
@@ -18,16 +17,14 @@ function addRegional (){
 
     col_sigla.textContent = input_sigla.value
     col_cidade.textContent = input_cidade.value
-    col_id.textContent = id
-    id++
+    col_id.textContent = idRegional
+    idRegional++
 
     line.appendChild(col_id);
     line.appendChild(col_sigla);
     line.appendChild(col_cidade);
 
     table.appendChild(line)
-
-    //select 
 
     const select = document.querySelector("#select_regional")
 
@@ -39,7 +36,7 @@ function addRegional (){
 
     select.appendChild(op)
 
-    // form.reset()
+    form.reset()
 
 
 }
