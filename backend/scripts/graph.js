@@ -1,10 +1,10 @@
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
           ['Categoria', 'Valor', { role: 'style' }],
-          ['Agentes',    0.01, 'color: #a6d854'],
-          ['Assuntos',   1.00, 'color:rgb(102, 159, 194); opacity: 0.5'],  
-          ['Regionais',  0.02, 'color: #ffd92f'],
-          ['Relatórios', 0.01, 'color: #fc8d62']
+          ['Agentes',    idAgent-1, 'color: #a6d854'],
+          ['Assuntos',   idSubject-1, 'color:rgb(102, 159, 194); opacity: 0.5'],  
+          ['Regionais',  idRegional-1, 'color: #ffd92f'],
+          ['Relatórios', idReport-1, 'color: #fc8d62']
         ]);
 
         var options = {

@@ -19,7 +19,7 @@
                 </h2>
                 <div id="flush-collapseAssunto" class="accordion-collapse collapse" aria-labelledby="flush-assunto" data-bs-parent="#accordionForms">
                     <div class="accordion-body">
-                        <form id="formSubject" method="post" onsubmit="addSubject(); return false;">
+                        <form id="formSubject" method="post" onsubmit="addSubject(); drawChart(); return false;">
                             <div class="form-floating mb-1">
                                 <input type="text" class="form-control" id="floatingInput" name="descricao" required>
                                 <label for="floatingInput">Descrição do Assunto</label>
@@ -38,7 +38,7 @@
                 </h2>
                 <div id="flush-collapseRegional" class="accordion-collapse collapse" aria-labelledby="flush-regional" data-bs-parent="#accordionForms">
                     <div class="accordion-body">
-                        <form id="formRegional" method="post" onsubmit="addRegional(); return false;">
+                        <form id="formRegional" method="post" onsubmit="addRegional();  drawChart();  return false;">
                             <div class="form-floating mb-1">
                                 <input type="text" class="form-control" id="floatingInput" name="sigla" required>
                                 <label for="floatingInput">Sigla da Regional</label>
@@ -61,7 +61,7 @@
                 </h2>
                 <div id="flush-collapseAgente" class="accordion-collapse collapse" aria-labelledby="flush-agente" data-bs-parent="#accordionForms">
                     <div class="accordion-body">
-                        <form id="formAgent" method="post" onsubmit="addAgent(); return false;">
+                        <form id="formAgent" method="post" onsubmit="addAgent();  drawChart();  return false;">
                             <div class="form-floating mb-1">
                                 <input type="text" class="form-control" id="floatingInput" name="nome" required>
                                 <label for="floatingInput">Nome do Agente</label>
@@ -83,7 +83,7 @@
                 </h2>
                 <div id="flush-collapseRelatorio" class="accordion-collapse collapse" aria-labelledby="flush-relatorio" data-bs-parent="#accordionForms">
                     <div class="accordion-body">
-                        <form id="formReport" method="post" onsubmit="addReport(); return false;">
+                        <form id="formReport" method="post" onsubmit="addReport();  drawChart(); return false;">
                             <div class="form-floating mb-1">
                                 <input type="date" class="form-control" id="floatingInput" name="data" required>
                                 <label for="floatingInput">Descrição do Assunto</label>
