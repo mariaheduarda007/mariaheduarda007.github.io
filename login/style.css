@@ -5,7 +5,8 @@ body {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #left {
@@ -35,7 +36,7 @@ body {
   margin: 0 auto;
 }
 
-.bg-icons, #i-linkedin, #i-twitter, #i-google, #i-facebook {
+.bg-icons, #i-facebook, #i-google, #i-twitter, #i-linkedin {
   width: 40px;
   height: 40px;
 }
@@ -49,7 +50,7 @@ body {
 }
 
 #i-twitter {
-  background-color: rgb(97, 184, 239);
+  background-color: #61b8ef;
 }
 
 #i-linkedin {
@@ -64,4 +65,5 @@ body {
 #right {
   padding: 0;
   margin: 0;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */

@@ -3,12 +3,13 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: rgb(221, 221, 221) !important;
+  background-color: #dddddd !important;
   overflow: hidden;
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #customRange::-webkit-slider-thumb {
@@ -33,29 +34,30 @@ td {
 }
 
 #tableComponente tr:nth-child(odd) {
-  background-color: rgb(38, 43, 49);
-  border-bottom: 1px rgb(144, 144, 144) solid;
+  background-color: #262b31;
+  border-bottom: 1px #909090 solid;
 }
 
 #tableComponente tr:nth-child(even) {
-  background-color: rgb(44, 49, 55);
-  border-bottom: 1px rgb(144, 144, 144) solid;
+  background-color: #2c3137;
+  border-bottom: 1px #909090 solid;
 }
 
 #tableConceito tr:nth-child(odd) {
-  background-color: rgb(186, 186, 186);
-  border-bottom: 1px rgb(188, 188, 188) solid;
+  background-color: #bababa;
+  border-bottom: 1px #bcbcbc solid;
 }
 
 #tableConceito tr:nth-child(even) {
-  background-color: rgb(209, 209, 209);
-  border-bottom: 1px rgb(188, 188, 188) solid;
+  background-color: #d1d1d1;
+  border-bottom: 1px #bcbcbc solid;
 }
 
 #selectDisciplines option:nth-child(even) {
-  background-color: rgb(216, 216, 216);
+  background-color: #d8d8d8;
 }
 
 .modal-dialog, .modal-content, .modal-body {
   height: 90vh;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
