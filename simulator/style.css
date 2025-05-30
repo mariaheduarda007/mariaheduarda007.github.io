@@ -1,41 +1,28 @@
 body {
   margin: 0;
   padding: 0;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 300px 1fr;
-      grid-template-columns: 300px 1fr;
-      grid-template-areas: "menu simulator";
+  grid-template-columns: 300px 1fr;
+  grid-template-areas: "menu simulator";
   min-height: 100vh;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .font, .subtitle {
   font-size: 24px;
-  color: #fffdfd;
+  color: rgb(255, 253, 253);
 }
 
 .menu {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: menu;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #6d6da3;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(109, 109, 163);
 }
 
 .subtitle {
@@ -51,17 +38,13 @@ h3 {
   width: 150px;
   height: 100px;
   gap: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.option-box, #pink-box, #salmon-box, #blue-box, #white-box, #orange-box, #green-box {
+.option-box, #green-box, #orange-box, #white-box, #blue-box, #salmon-box, #pink-box {
   height: 45%;
   width: 30%;
 }
@@ -87,27 +70,21 @@ h3 {
 }
 
 #green-box {
-  background-color: #59cc8d;
+  background-color: rgb(89, 204, 141);
 }
 
 .format-options {
   width: 150px;
   height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   direction: row;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
-.format-box, #format-round, #format-square {
+.format-box, #format-square, #format-round {
   height: 40px;
   width: 40px;
 }
@@ -129,16 +106,9 @@ h3 {
 .align-options {
   height: 120px;
   width: 170px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -149,19 +119,15 @@ h3 {
 
 .input-decoration, #size-options, .align-box {
   border-radius: 5px;
-  border: #040404 solid;
+  border: rgb(4, 4, 4) solid;
   border-width: 3px;
   outline: none;
 }
 
 #simulator {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: simulator;
   padding: 30px;
-  background-color: #ecdfdf;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: rgb(236, 223, 223);
   display: flex;
   gap: 10px;
 }
@@ -172,24 +138,14 @@ h3 {
   background-color: pink;
   border: black solid 1px;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  -webkit-transition-property: background-color border-radius;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
   transition-property: background-color border-radius;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 
 .box-selection {
-  border: #040404 solid 3px;
-}
-/*# sourceMappingURL=style.css.map */
+  border: rgb(4, 4, 4) solid 3px;
+}/*# sourceMappingURL=style.css.map */
