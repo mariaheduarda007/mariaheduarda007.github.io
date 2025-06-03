@@ -17,7 +17,8 @@ function resolve04(...array) {
         return filter_perfect(Number(e))
     })
 
-    alert(result)
+    let output = document.querySelector('#output')
+    output.innerHTML = result.join(" ")
 
 }
 
@@ -26,17 +27,14 @@ const filter_perfect = (val) => {
     let div = 1
     let sumDiv = 0
 
-    while (sumDiv < val) {
-        if (val % div == 0 && div != val) {
+    while (div < val) {
+        if (val % div == 0) {
             sumDiv += div
         }
         div++
     }
 
-
-    if (sumDiv == val){
-        return true
-    }
+    return sumDiv == val 
 
 }
 
