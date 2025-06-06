@@ -1,17 +1,20 @@
 <script>
-  import name from "./Keyboard.svelte";
+  export let value = "";
 </script>
 
-<div>
-	<p>  {name} </p>
-</div>
+<div> {value} 1 </div>
 
 <style>
-	div {
-		width: 250px;
-		height: 40px;
-		border: 3px solid black;
-		color: black;
-
-	}
+  div {
+	box-sizing: border-box;
+    width: 250px;
+    height: 40px;
+	padding: 1px 5px;
+    border: 3px solid black;
+    color: black;
+    font-size: 22px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	text-align: start;
+	line-height: 50px;
+  }
 </style>

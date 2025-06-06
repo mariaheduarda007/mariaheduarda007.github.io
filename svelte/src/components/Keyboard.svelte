@@ -1,7 +1,7 @@
 <script>
-	let name = "";
-	function digit(digit){
-		name = digit;
+	export let value = "";
+	function digit(d){
+		value = d;
 	}
 
 
