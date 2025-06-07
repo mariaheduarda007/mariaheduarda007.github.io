@@ -2,7 +2,7 @@
   export let display = "";
 </script>
 
-<div>{display}</div>
+<div>{display} </div>
 
 <style>
   div {

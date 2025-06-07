@@ -2,22 +2,31 @@
   export let display = "";
   let expression = ""; // SER nUMERO IR FAZENDO CONTA DINAMICANTE
   let cleanForm = false;
+  let init = true
 
   function digit(d) {
+  if(init){
+    display = "";
+  }
+  init = false
     if (typeof d === "number") {
       if (cleanForm) {
         display = d;
-        cleanForm = false
+        cleanForm = false;
       } else {
         display += d.toString();
       }
-      expression += display;
-      
+      expression += d;
     } else if (d === "C") {
-      display = "";
-      calc = "";
+      display = "0";
+      expression = "";
+      init = true
     } else if (d === "=") {
       alert(calcExpression(expression));
+      expression = "";
+      display = "0";
+      init = true 
+
     } else if (typeof d !== "number") {
       cleanForm = true;
       expression += d;
@@ -25,10 +34,9 @@
     }
   }
 
-  function calcExpression(expression){
+  function calcExpression(expression) {
     return expression;
   }
-
 </script>
 
 <div>

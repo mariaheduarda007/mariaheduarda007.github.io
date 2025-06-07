@@ -2,7 +2,7 @@
 	import Display from './components/Display.svelte'
 	import Keyboard from './components/Keyboard.svelte'
 
-	let name = ""
+	let name = "0"
 </script>
 
 <Display bind:display={name}  />
