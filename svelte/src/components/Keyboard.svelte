@@ -1,9 +1,33 @@
 <script>
-	export let value = "";
-	function digit(d){
-		value = d;
-	}
+  export let display = "";
+  let expression = ""; // SER nUMERO IR FAZENDO CONTA DINAMICANTE
+  let cleanForm = false;
 
+  function digit(d) {
+    if (typeof d === "number") {
+      if (cleanForm) {
+        display = d;
+        cleanForm = false
+      } else {
+        display += d.toString();
+      }
+      expression += display;
+      
+    } else if (d === "C") {
+      display = "";
+      calc = "";
+    } else if (d === "=") {
+      alert(calcExpression(expression));
+    } else if (typeof d !== "number") {
+      cleanForm = true;
+      expression += d;
+      display = d;
+    }
+  }
+
+  function calcExpression(expression){
+    return expression;
+  }
 
 </script>
 
@@ -11,7 +35,7 @@
   <button on:click={() => digit(1)}><p>1</p></button>
   <button on:click={() => digit(2)}><p>2</p></button>
   <button on:click={() => digit(3)}><p>3</p></button>
-  <button on:click={() => digit("+")}><p> + </p></button>
+  <button on:click={() => digit("+")}><p>+</p></button>
   <button on:click={() => digit(4)}><p>4</p></button>
   <button on:click={() => digit(5)}><p>5</p></button>
   <button on:click={() => digit(6)}><p>6</p></button>
@@ -21,7 +45,7 @@
   <button on:click={() => digit(9)}><p>9</p></button>
   <button on:click={() => digit("*")}><p>*</p></button>
   <button on:click={() => digit("=")}><p>=</p></button>
-  <button on:click={() => digit("0")}><p>0</p></button>
+  <button on:click={() => digit(0)}><p>0</p></button>
   <button on:click={() => digit("C")}><p>C</p></button>
   <button on:click={() => digit("/")}><p>/</p></button>
 </div>
@@ -52,21 +76,20 @@
   }
 
   button {
-	all:unset;
+    all: unset;
     width: 54px;
     height: 54px;
     background-color: black;
     color: white;
     font-size: 22px;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-	text-align: center;
-	line-height: 5%;
+    text-align: center;
+    line-height: 5%;
     margin: 0;
     border-radius: 10px;
   }
 
   button:hover {
-	background-color: rgb(39, 39, 39);
+    background-color: rgb(39, 39, 39);
   }
-  
 </style>

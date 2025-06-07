@@ -5,8 +5,8 @@
 	let name = ""
 </script>
 
-<Display bind:value={name}  />
-<Keyboard bind:value={name}/>
+<Display bind:display={name}  />
+<Keyboard bind:display={name}/>
 
 
 <style>
