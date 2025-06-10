@@ -2,10 +2,13 @@
   export let display = "";
 </script>
 
-<div>{display} </div>
+<div> {display} </div>
 
 <style>
+
+  
   div {
+    overflow: hidden;
     box-sizing: border-box;
     width: 250px;
     height: 40px;

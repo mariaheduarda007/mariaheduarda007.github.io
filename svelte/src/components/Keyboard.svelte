@@ -7,7 +7,7 @@
   const isNumber = (value) => !isNaN(Number(value));
   const sumOp = (a, b) => Number(a) + Number(b);
   const subtractOp = (a, b) => Number(a) - Number(b);
-  const divideOp = (a, b) => Number(a) / Number(b);
+  const divideOp = (a, b) => parseFloat((Number(a) / Number(b)).toFixed(2));
   const multiplyOp = (a, b) => Number(a) * Number(b);
 
   function digit(d) {
@@ -30,7 +30,7 @@
     } else if (d === "=") {
       opArray.push(display);
       calculate();
-      display = opArray[0]
+      display = opArray[0];
       opArray.length = 0;
     } else if (!isNumber(d)) {
       if (!cleanForm) {
@@ -71,7 +71,6 @@
         }
       }
     }
-
   }
 </script>
 
