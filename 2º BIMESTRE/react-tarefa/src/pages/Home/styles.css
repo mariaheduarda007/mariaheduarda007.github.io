@@ -1,0 +1,53 @@
+.App {
+  margin: 10px;
+}
+
+.card-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  padding: 0px 10px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 7px;
+  padding: 5px;
+  border: 2px solid gray;
+  border-radius: 10px;
+  box-shadow: 5px 5px 3px 2px gray;
+}
+
+.card:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.card-photo {
+  display: flex;
+  grid-row-start: 1;
+  grid-row-end: 6;
+  border-right: 2px solid gray;
+  width: min(160px);
+  justify-content: center;
+  align-items: center;
+}
+
+.card-item {
+  display: flex;
+  justify-content: center;
+  height: 35px;
+}
+
+.image {
+  border-radius: 100px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.mail {
+  font-size: 14px;
+  font-style: italic;
+}
