@@ -24,7 +24,7 @@ export default class Home extends Component {
     try {
       const apiResponse = await fetch(USERAPI + "/?results=10");
       if (!apiResponse.ok) {
-        throw new Error('ERRO - RESPONSE!')
+        throw new Error('ERROR ON RESPONSE!')
       }
       const json = await apiResponse.json();
       this.setState({ users: json.results })

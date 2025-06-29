@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    width: 400px;
+    height: 400px;
+    color: white;
+    background-color: black;
+}
+
