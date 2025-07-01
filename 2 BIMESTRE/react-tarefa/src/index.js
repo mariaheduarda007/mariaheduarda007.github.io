@@ -1,17 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from 'react'; // sintaxe JSX
+import ReactDOM from 'react-dom/client'; // conecta o react ao DOM do navegador
 import './styles/index.css';
 import Home from './pages/Home';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals'; // não é obrigatório
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Home />
   </React.StrictMode>
-);
+); // renderiza na root o componente principal
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

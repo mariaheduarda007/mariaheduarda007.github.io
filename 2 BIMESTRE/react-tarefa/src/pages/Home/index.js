@@ -1,5 +1,5 @@
 import { Component } from "react";
-//biblioteca do react que permite criar components
+//biblioteca do react que permite criar components, importa uma classe?
 import { USERAPI } from "../../api"
 //importando vaiavel do link da api
 import './styles.css';
@@ -16,15 +16,15 @@ export default class Home extends Component {
     }
 
   }
-  componentDidMount() {
+  componentDidMount() { // função executada quando Home é renderizada
     this.loadUsers();
   }
 
   async loadUsers() { // RETORNA UM OBJETO PROMISE, QUE SABE AVISAR QUANDO TERMINOU
     try {
-      const apiResponse = await fetch(USERAPI + "/?results=10");
+      const apiResponse = await fetch(USERAPI + "/?results=10"); // a chave da api deve ser usada em toda requisião
       if (!apiResponse.ok) {
-        throw new Error('ERROR ON RESPONSE!')
+        throw new Error('ERROR ON RESPONSE!') // quebra o fluxo e armazena o erro em "e"
       }
       const json = await apiResponse.json();
       this.setState({ users: json.results })
