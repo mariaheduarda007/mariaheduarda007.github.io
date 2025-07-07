@@ -5,171 +5,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="images/star.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="icon" href="./images/star.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    <title> Homepage Madu </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title> MARIA </title>
 </head>
 
 <body>
-    <header>
-        <div id="profile-image"> <img alt="Foto Estrela" id="image" src="../images/star.png"> </div>
-        <p id="title"> Maria Eduarda Do Nascimento </p>
-    </header>
-    <div class="menu-topo">
-        <i class="material-icons" onclick="openMenu()">menu</i>
+    <p class="home-title"> Maria Eduarda do Nascimento </p>
+    <div class="routes-card">
+        <a class="routes-text" href="./index.html">HOME</a>
+        <a class="routes-text" href="./pages/about/index.html">|ABOUT</a>
+        <a class="routes-text" href="./pages/projects/index.html">|PROJECTS</a>
     </div>
-    <nav>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/1 BIMESTRE/curriculo-server/index.html" target="_blank"> Currículo </a> </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/1 BIMESTRE/site-noticia/index.html" target="_blank"> Site de Notícias </a>
-            </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/1 BIMESTRE/memory-game/index.html" target="_blank"> Jogo da Memória </a>
-            </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/1 BIMESTRE/1ºB-avaliacaoA/index.html" target="_blank"> 1B - Avaliação A
-                </a>
-            </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/1 BIMESTRE/simulator/index.html" target="_blank"> Simulador Flexbox </a>
-            </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/1 BIMESTRE/login/index.html" target="_blank"> Tela Login </a>
-            </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/1 BIMESTRE/bootstrap/index.html" target="_blank"> Sistema Escola </a>
-            </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/1 BIMESTRE/space/index.html" target="_blank">Space Game </a>
-            </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/2 BIMESTRE/backend/index.html" target="_blank"> JS </a>
-            </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/2 BIMESTRE/js-functions/index.html" target="_blank"> Funções </a>
-            </p>
-        </div>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/2 BIMESTRE/svelte/public/index.html" target="_blank"> Calculadora </a>
-            </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/2 BIMESTRE/react-tarefa" target="_blank"> Users API </a>
-            </p>
-        </div>
+    <p class="home-text"> Página de programação para projetos, trabalhos acadêmicos e guia de informações de contato.
+    </p>
 
-    </nav>
-    <main>
-        <div id="menu-lateral">
-            <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/1 BIMESTRE/curriculo-server/index.html" target="_blank"> Currículo </a> </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/1 BIMESTRE/site-noticia/index.html" target="_blank"> Site de Notícias </a>
-            </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/1 BIMESTRE/memory-game/index.html" target="_blank"> Jogo da Memória </a>
-            </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/1 BIMESTRE/1ºB-avaliacaoA/index.html" target="_blank"> 1B - Avaliação A
-                </a>
-            </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/1 BIMESTRE/simulator/index.html" target="_blank"> Simulador Flexbox </a>
-            </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/1 BIMESTRE/login/index.html" target="_blank"> Tela Login </a>
-            </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/1 BIMESTRE/bootstrap/index.html" target="_blank"> Sistema Escola </a>
-            </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/1 BIMESTRE/space/index.html" target="_blank">Space Game </a>
-            </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/2 BIMESTRE/backend/index.html" target="_blank"> JS </a>
-            </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/2 BIMESTRE/js-functions/index.html" target="_blank"> Funções </a>
-            </p>
-        </div>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/2 BIMESTRE/svelte/public/index.html" target="_blank"> Calculadora </a>
-            </p>
-        </div>
-        <div class="menu-item">
-            <p class="p-item"> <a class="link" href="/2 BIMESTRE/react-tarefa" target="_blank"> Users API </a>
-            </p>
-        </div>
 
-        </div>
-        <div class="info-div">
-            <h1> Informações de Contato </h1>
-            <p class="p-item">
-                Brasil - Matinhos PR
-            </p>
-            <p class="p-item">
-                (41) 9993-1132
-            </p>
-
-            <p class="p-item">
-                maduinfo23@gmail.com
-            </p>
-        </div>
-        <div class="info-div">
-            <h1> Informações Acadêmicas </h1>
-            <p class="p-item">
-                Instituto Federal Do Paraná - IFPR
-            </p>
-            <p class="p-item">
-                Campus Paranaguá
-            </p>
-
-            <p class="p-item">
-                Ensino Médio Integrado - Curso Técnico de Informática
-            </p>
-        </div>
-
-    </main>
 </body>
+
+
 <script type="text/javascript">
-    function openMenu() {
-        const menu = document.querySelector('#menu-lateral')
-
-        if (menu.classList.contains('menu-open')) {
-            menu.classList.remove('menu-open');
-            menu.classList.add('menu-close');
-
-        }
-        else {
-            menu.classList.remove('menu-close');
-            menu.classList.add('menu-open');
-        }
-
-    }
-
 </script>
 
 </html>

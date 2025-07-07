@@ -1,0 +1,56 @@
+body {
+    overflow: hidden;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+    background:
+        radial-gradient(circle at top left, rgba(87, 20, 141, 0.6), rgba(0, 0, 0, 0.6) 40%),
+        radial-gradient(ellipse at bottom right, rgba(87, 20, 141, 0.8), rgba(0, 0, 0, 0.8) 40%);
+    font-family: 'Roboto Mono', monospace;
+    color: white
+}
+
+.home-title {
+    font-weight: bold;
+    font-size: 64px;
+    width: 520px;
+    height: 190px;
+    position: absolute;
+    left: 90px;
+    top: 50px;
+}
+
+
+.home-text {
+    font-size: 32px;
+    font-weight: normal;
+    width: 890px;
+    height: 80px;
+    position: absolute;
+    left: 90px;
+    top: 330px;
+}
+
+.routes-text {
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.routes-card {
+    display: inline;
+    position: absolute;
+    right: 25px;
+    top: 10px;
+}
+
+.subtitle {
+    font-weight: normal;
+    font-size: 32px;
+}

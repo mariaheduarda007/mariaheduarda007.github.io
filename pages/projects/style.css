@@ -1,0 +1,84 @@
+.projects-title {
+    font-weight: bold;
+    font-size: 64px;
+    width: 810px;
+    height: 170px;
+    position: absolute;
+    left: 90px;
+    top: 0px;
+}
+
+.subtitle {
+    font-weight: normal;
+    font-size: 32px;
+    width: 220px;
+    height: 40px;
+}
+
+.projects-card-title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: 400px;
+    column-gap: 500px;
+    padding: 10px 10px;
+    position: absolute;
+    left: 90px;
+    top: 250px;
+
+}
+
+.projects-card-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90vw;
+    height: 350px;
+    column-gap: 200px;
+    padding: 10px 10px;
+    position: absolute;
+    left: 90px;
+    top: 350px;
+
+}
+
+.first-list-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    width: 35vw;
+    height: 300px;
+}
+
+.second-list-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    /* flex-wrap: wrap; */
+    row-gap: 20px;
+    width: 35vw;
+    height: 300px;
+}
+
+.link-card {
+    width: 250px;
+    height: 50px;
+    background-color: rgba(61, 15, 97, 0.35);
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.link-text {
+    position: relative;
+    top: 10px;
+    left: 5px;
+    font-size: 20px;
+    font-weight: normal;
+    width: 890px;
+    height: 80px;
+}
