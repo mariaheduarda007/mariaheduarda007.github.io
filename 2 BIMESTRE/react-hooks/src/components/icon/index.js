@@ -1,6 +1,6 @@
 import sunIcon from '../../assets/sun-icon.jpg';
 import { useState } from 'react';
-import "./index.css";
+import "./style.css";
 
 
 export function Icon(props) {

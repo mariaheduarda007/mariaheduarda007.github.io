@@ -1,13 +1,16 @@
 import './style.css';
+import {Card} from "../../components/card"
 import { WeatherProvider } from '../../components/contexto/provider';
-import {Title} from '../../components/title'
-export function Home() {
+
+export function About() {
   return (
     <div>
+      
       <WeatherProvider>
-        <Title />
-      </WeatherProvider>      
+      <Card initInfo="Dados" />
+      </WeatherProvider>
     </div>
   );
 }
+
 
